@@ -1,0 +1,25 @@
+{
+  "name": "scrum-interactive",
+  "version": "1.0.0",
+  "description": "A scheduling and organizational app based in simplistic usability",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JBowen96/Scrum-Interactive.git"
+  },
+  "author": "Various",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JBowen96/Scrum-Interactive/issues"
+  },
+  "homepage": "https://github.com/JBowen96/Scrum-Interactive#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^5.3.5",
+    "mysql": "^2.18.1"
+  }
+}

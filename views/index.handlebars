@@ -1,0 +1,12 @@
+<h1>Task App</h1>
+
+<div id="todo" class="column">
+    <h2>To-Do</h2>
+    {{#each tasks.todo}}
+    <div class="task" data-id="{{id}}" data-status="todo">{{title}}</div>
+    {{/each}}
+</div>
+
+<!-- Repeat similar structure for 'inwork' and 'completed' columns -->
+
+<script src="/js/main.js"></script>
