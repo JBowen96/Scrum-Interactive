@@ -1,17 +1,11 @@
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'J ',
+  host: 'database-1.cyi0wfbnivj1.us-east-1.rds.amazonaws.com',
+  user: 'admin',
+  port: 3306,
   password: '1CrappyPassword!',
-  database: 'task_app',
+  database: 'task_app1'
 });
-
-try {
-    db.connect();
-    console.log('Connected to the database');
-  } catch (error) {
-    console.error('Error connecting to the database:', error);
-  }
   
-  module.exports = db;
+module.exports = db;
