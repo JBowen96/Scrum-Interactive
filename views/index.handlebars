@@ -6,6 +6,18 @@
     <div class="task" data-id="{{id}}" data-status="todo">{{title}}</div>
     {{/each}}
 </div>
+<div id="inwork" class="column">
+    <h2>In-Work</h2>
+    {{#each tasks.inwork}}
+    <div class="task" data-id="{{id}}" data-status="inwork">{{title}}</div>
+    {{/each}}
+</div>
+<div id="completed" class="column">
+    <h2>Completed</h2>
+    {{#each tasks.completed}}
+    <div class="task" data-id="{{id}}" data-status="completed">{{title}}</div>
+    {{/each}}
+</div>
 
 <!-- Repeat similar structure for 'inwork' and 'completed' columns -->
 

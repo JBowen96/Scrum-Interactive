@@ -8,7 +8,7 @@ const TaskController = {
         inwork: await Task.getAllByStatus('inwork'),
         completed: await Task.getAllByStatus('completed')
       };
-      res.render('index', { tasks });
+      res.render('views/index.handlebars', { tasks });
     } catch (err) {
       res.status(500).json({ error: err.message });
     }
