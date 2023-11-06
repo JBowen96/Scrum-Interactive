@@ -7,6 +7,8 @@
     <link href="css/layout.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="js/dayjs.js" defer></script>
     <title>Task App</title>
   </head>
 
@@ -14,9 +16,27 @@
   <body class="bg-slate-200">
     <div class="body-container">
       <header class="bg-slate-400 border-b-4 border-slate-600">
-        <h1>
-            Header
-        </h1>
+        <div class="header-container">
+          <h1 class="">
+            Snap To It
+          </h1>
+          <div class="time-container">
+            <h2 id="current-date">
+              Date
+            </h2>
+            <h2 id="timestamp">
+              Time
+            </h2>
+          </div>
+          <div class="nav-container">
+            <button
+              class="py-3 px-4 w-24 inline-flex justify-center items-center gap-2 rounded-md bg-blue-100 border border-transparent font-semibold text-blue-500 hover:text-white hover:bg-blue-500 focus:outline-none focus:ring-2 ring-offset-white focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm"
+            >Dashboard</button>
+            <button
+              class="py-3 px-4 w-24 inline-flex justify-center items-center gap-2 rounded-md bg-blue-100 border border-transparent font-semibold text-blue-500 hover:text-white hover:bg-blue-500 focus:outline-none focus:ring-2 ring-offset-white focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm"
+            >Logout</button>
+          </div>
+        </div>
       </header>
       <main>
         {{{body}}}
