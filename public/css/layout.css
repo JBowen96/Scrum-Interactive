@@ -1,6 +1,6 @@
 .body-container {
   display: grid;
-  grid-template-rows: 2fr 7fr 1fr;
+  grid-template-rows: 1fr 8fr 1fr;
   grid-template-columns: 1fr;
   height: 100vh;
 }
@@ -8,6 +8,30 @@
 .body-container header {
   display: grid;
   place-items: center;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    place-items: center;
+    width: 100%;
+}
+
+.time-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    place-items: center;
+    width: 50%;
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    place-items: center;
+    width: 75%;
 }
 
 .main-container {
