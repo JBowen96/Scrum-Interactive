@@ -1,0 +1,52 @@
+.body-container {
+  display: grid;
+  grid-template-rows: 2fr 7fr 1fr;
+  grid-template-columns: 1fr;
+  height: 100vh;
+}
+
+.body-container header {
+  display: grid;
+  place-items: center;
+}
+
+.main-container {
+    height: 100%;
+}
+
+.body-container footer {
+  display: grid;
+  place-items: center;
+}
+
+.login {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+  text-align: center;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: repeat(1fr, 2);
+  grid-template-rows: repeat(1fr, 3);
+  width: 33%;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.signup {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+  text-align: center;
+}
+
+.signup-form {
+  display: grid;
+  grid-template-columns: repeat(1fr, 2);
+  grid-template-rows: repeat(1fr, 3);
+  width: 33%;
+  margin: 0 auto;
+  gap: 1rem;
+}

@@ -1,20 +1,35 @@
-<div class="column">
-    <h2 class="title pb-4">Please Log in</h2>
-    <hr>
-    <form class="login-form">
-        <div>
-            <label for="email-login">Email:</label>
-            <input type="text" id="email-login" />
-        </div>
-        <div>
-            <label for="password-login">Password:</label>
-            <input type="password" id="password-login" />
-        </div>
-        <div>
-            <button type="submit" class="button is-primary">Login</button>
-            <a href="/signup"><button type="button" class="button is-danger">Signup</button></a>
-        </div>
+
+<div class="main-container bg-gradient-to-b from-slate-200 to-slate-400">
+  <div class="login">
+    <h2 id="login-title" class="title pb-4">login:</h2>
+    <form id="login-form" class="login-form">
+      <label for="email-login">email:</label>
+      <input
+        type="text"
+        id="email-login"
+        class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500"
+      />
+      <label for="password-login">password:</label>
+      <input
+        type="password"
+        id="password-login"
+        class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500"
+      />
+      <div>
+        <button
+          type="submit"
+          class="py-[.688rem] w-24 px-4 inline-flex justify-center items-center gap-2 rounded-md border-2 border-gray-200 font-semibold text-blue-500 hover:text-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:border-gray-700 dark:hover:border-blue-500"
+        >login</button>
+      </div>
+      <a href="/signup"><button
+          type="button"
+          class="py-[.688rem] w-24 px-4 inline-flex justify-center items-center gap-2 rounded-md border-2 border-gray-200 font-semibold text-blue-500 hover:text-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:border-gray-700 dark:hover:border-blue-500"
+        >signup</button></a>
+
+
+
     </form>
+  </div>
 </div>
 
 <!-- javascript file-->
