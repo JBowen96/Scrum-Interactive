@@ -77,3 +77,20 @@
   margin: 0 auto;
   gap: 1rem;
 }
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  place-items: center;
+  margin: 0 auto;
+}
+
+.new-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
