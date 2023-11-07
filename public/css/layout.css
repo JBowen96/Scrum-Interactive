@@ -20,8 +20,8 @@
 
 .time-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     place-items: center;
     width: 50%;
 }
@@ -36,6 +36,7 @@
 
 .main-container {
     height: 100%;
+    margin-top: 2rem;
 }
 
 .body-container footer {
@@ -55,6 +56,7 @@
   grid-template-columns: repeat(1fr, 2);
   grid-template-rows: repeat(1fr, 3);
   width: 33%;
+  place-items: center;
   margin: 0 auto;
   gap: 1rem;
 }
@@ -71,6 +73,7 @@
   grid-template-columns: repeat(1fr, 2);
   grid-template-rows: repeat(1fr, 3);
   width: 33%;
+  place-items: center;
   margin: 0 auto;
   gap: 1rem;
 }
