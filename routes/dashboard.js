@@ -6,6 +6,7 @@ const Card = require('../models/card.js');
 router.get('/dashboard', async (req, res) => {
     try {
         const cards = await Card.findAll();
+        console.log(cards);
         res.render('dashboard', { cards });
     } catch (error) {
         console.error(error);
@@ -42,4 +43,4 @@ router.post('/move-card/:id/:column', async (req, res) => {
     }
 });
 
-module.exports = router;     
+module.exports = router;         
