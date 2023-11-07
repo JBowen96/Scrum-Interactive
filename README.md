@@ -26,7 +26,7 @@ This project is licensed under the MIT license.
 
 ## Contributing
 
-Josh Bohen, Zach Richardson, Ben Berkowitz, Silvia Fernandez
+Josh Bowen, Zach Richardson, Ben Berkowitz, Silvia Fernandez
 
 ## Tests
 
