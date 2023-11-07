@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="description" content="A simple task managing app that lets users drag-and-drop tasks whether they are in-progress or completed" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="/css/layout.css" rel="stylesheet" />
   <link href="/css/media-q.css" rel="stylesheet" />
@@ -18,8 +19,8 @@
   <div class="body-container">
     <header class="bg-slate-400 border-b-4 border-slate-600 p-4 mb-4">
       <div class="header-container">
-        <h1 class="text-3xl">
-          Snap To It
+        <h1 class="text-3xl font-bold">
+          <span class="text-green-700">Snap</span> <span class="text-red-700">To</span> <span class="text-blue-700">It</span>
         </h1>
         <div class="time-container text-xl">
           <h2 id="current-date">
@@ -33,11 +34,11 @@
           <button onclick="window.location.reload()"
             class="py-3 px-4 w-24 inline-flex justify-center items-center gap-2 rounded-md bg-blue-100 border border-transparent font-semibold text-blue-500 hover:text-white hover:bg-blue-500 focus:outline-none focus:ring-2 ring-offset-white focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm">Dashboard</button>
           <button id="logoutButton"
-            class="py-3 px-4 w-24 inline-flex justify-center items-center gap-2 rounded-md bg-blue-100 border border-transparent font-semibold text-blue-500 hover:text-white hover:bg-blue-500 focus:outline-none focus:ring-2 ring-offset-white focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm">Logout</button>
+            class="py-3 px-4 w-24 inline-flex justify-center items-center gap-2 rounded-md bg-red-100 border border-transparent font-semibold text-red-500 hover:text-white hover:bg-red-500 focus:outline-none focus:ring-2 ring-offset-white focus:ring-red-500 focus:ring-offset-2 transition-all text-sm">Logout</button>
         </div>
       </div>
     </header>
-    <main>
+    <main class="bg-gradient-to-b from-slate-200 to-slate-400">
       {{{body}}}
     </main>
     <footer class="bg-slate-400">
