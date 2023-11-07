@@ -1,4 +1,4 @@
-# Nsap-to-It
+# Snap-to-It
 
 ##Description
 
