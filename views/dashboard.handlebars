@@ -1,10 +1,25 @@
 <div class="container mx-auto my-8">
-    <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
+    <h1 class="text-3xl font-bold mb-4 text-center">Dashboard</h1>
 
-    <div class="flex space-x-4">
-        <div class="w-1/3">
-            <div class="column" id="to-do" ondrop="drop(event, 'to-do')" ondragover="allowDrop(event)">
-                <h2 class="text-xl font-semibold mb-4">To-Do</h2>
+    <!-- Form for creating new cards in 'to-do' column -->
+    <div class="new-card">
+        <h2 class="text-2xl font-bold mb-4">
+            Create New Card:
+        </h2>
+    <form class="create-card-form" data-column="to-do">
+        <input type="text" name="title" placeholder="Title" class="w-full p-2 mb-2 border rounded title" required>
+        <textarea name="description" placeholder="Description" class="w-full p-2 mb-2 border rounded description"
+            required></textarea>
+        <input type="hidden" name="column" value="to-do">
+        <button type="submit" class="py-3 px-4 w-32 inline-flex justify-center items-center gap-2 rounded-md bg-blue-400 border border-transparent font-semibold text-blue-200 hover:text-white hover:bg-blue-500 focus:outline-none focus:ring-2 ring-offset-white focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm">Create Card</button>
+    </form>
+    </div>
+
+
+    <div class="info">
+        <div class="w-1/3 border-blue-400 border-2">
+            <div class="column text-center" id="to-do" ondrop="drop(event, 'to-do')" ondragover="allowDrop(event)">
+                <h2 class="text-xl font-semibold">To-Do</h2>
                 {{#each cards}}
                 {{#if (eq column "to-do")}}
                 <div class="card" id="{{id}}" draggable="true" ondragstart="drag(event)">
@@ -13,20 +28,12 @@
                 </div>
                 {{/if}}
                 {{/each}}
-                <!-- Form for creating new cards in 'to-do' column -->
-                <form class="create-card-form" data-column="to-do">
-                    <input type="text" name="title" placeholder="Title" class="w-full p-2 mb-2 border rounded title" required>
-                    <textarea name="description" placeholder="Description" class="w-full p-2 mb-2 border rounded description"
-                        required></textarea>
-                    <input type="hidden" name="column" value="to-do">
-                    <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Create Card</button>
-                </form>
             </div>
         </div>
 
-        <div class="w-1/3">
-            <div class="column" id="in-work" ondrop="drop(event, 'in-work')" ondragover="allowDrop(event)">
-                <h2 class="text-xl font-semibold mb-4">In-Work</h2>
+        <div class="w-1/3 border-blue-400 border-2">
+            <div class="column text-center" id="in-work" ondrop="drop(event, 'in-work')" ondragover="allowDrop(event)">
+                <h2 class="text-xl font-semibold">In-Work</h2>
                 {{#each cards}}
                 {{#if (eq column "in-work")}}
                 <div class="card" id="{{id}}" draggable="true" ondragstart="drag(event)">
@@ -35,20 +42,12 @@
                 </div>
                 {{/if}}
                 {{/each}}
-                <!-- Form for creating new cards in 'in-work' column -->
-               <!-- <form class="create-card-form" data-column="in-work">
-                    <input type="text" name="title" placeholder="Title" class="w-full p-2 mb-2 border rounded" required>
-                    <textarea name="description" placeholder="Description" class="w-full p-2 mb-2 border rounded"
-                        required></textarea>
-                    <input type="hidden" name="column" value="in-work">
-                    <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Create Card</button>
-                </form>-->
             </div>
         </div>
 
-        <div class="w-1/3">
-            <div class="column" id="completed" ondrop="drop(event, 'completed')" ondragover="allowDrop(event)">
-                <h2 class="text-xl font-semibold mb-4">Completed</h2>
+        <div class="w-1/3 border-blue-400 border-2">
+            <div class="column text-center" id="completed" ondrop="drop(event, 'completed')" ondragover="allowDrop(event)">
+                <h2 class="text-xl font-semibold">Completed</h2>
                 {{#each cards}}
                 {{#if (eq column "completed")}}
                 <div class="card" id="{{id}}" draggable="true" ondragstart="drag(event)">
@@ -57,14 +56,6 @@
                 </div>
                 {{/if}}
                 {{/each}}
-                <!-- Form for creating new cards in 'completed' column -->
-                {{!-- <form class="create-card-form" data-column="completed">
-                    <input type="text" name="title" placeholder="Title" class="w-full p-2 mb-2 border rounded" required>
-                    <textarea name="description" placeholder="Description" class="w-full p-2 mb-2 border rounded"
-                        required></textarea>
-                    <input type="hidden" name="column" value="completed">
-                    <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Create Card</button>
-                </form> --}}
             </div>
         </div>
     </div>
