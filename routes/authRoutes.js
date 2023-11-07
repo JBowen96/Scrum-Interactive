@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const router = express.Router();
 const db = require('../config/database');
 const cookieParser = require('cookie-parser');
+const User = require('../models/user');
 
 // Use cookie-parser middleware
 router.use(cookieParser());
@@ -12,10 +13,10 @@ router.post('/signup', async (req, res) => {
 
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
-        const result = await db.query('INSERT INTO users (email, password) VALUES (?, ?)', [email, hashedPassword]);
+        const user = await User.create({ email, password: hashedPassword });
 
         // Set a cookie for the newly signed up user
-        res.cookie('userId', result.insertId, { maxAge: 60000, httpOnly: true }); // Adjust maxAge as needed
+        res.cookie('userId', user.id, { maxAge: 60000, httpOnly: true }); // Adjust maxAge as needed
 
         res.redirect('/dashboard');
     } catch (error) {
@@ -24,20 +25,18 @@ router.post('/signup', async (req, res) => {
     }
 });
 
-
-
 router.post('/login', async (req, res) => {
-    const { email, password } = req.body;  
+    const { email, password } = req.body;
 
     try {
-        const result = await db.query('SELECT * FROM users WHERE email = ?', [email]);  
+        const user = await User.findOne({ where: { email } });
 
-        if (result.length > 0) {
-            const match = await bcrypt.compare(password, result[0].password);
+        if (user) {
+            const match = await bcrypt.compare(password, user.password);
 
             if (match) {
                 // Set a cookie to store the user's session information
-                res.cookie('userId', result[0].id, { maxAge: 60000, httpOnly: true }); // Adjust maxAge as needed
+                res.cookie('userId', user.id, { maxAge: 60000, httpOnly: true }); // Adjust maxAge as needed
                 console.log('hello bug');
                 return res.redirect('/dashboard');
             }
@@ -51,3 +50,4 @@ router.post('/login', async (req, res) => {
 });
 
 module.exports = router;
+ 
