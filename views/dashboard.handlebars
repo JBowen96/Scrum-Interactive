@@ -21,7 +21,7 @@
             <div class="column text-center" id="to-do" ondrop="drop(event, 'to-do')" ondragover="allowDrop(event)">
                 <h2 class="text-xl font-semibold">To-Do</h2>
                 {{#each cards}}
-                {{#if (eq column "to-do")}}
+                {{#if (eq status "to-do")}}
                 <div class="card" id="{{id}}" draggable="true" ondragstart="drag(event)">
                     <h3 class="text-lg font-semibold">{{title}}</h3>
                     <p>{{description}}</p>

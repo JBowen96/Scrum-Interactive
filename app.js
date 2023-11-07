@@ -7,6 +7,7 @@ const sequelize = require('./config/database');
 const dashboardRoutes = require('./routes/dashboard');
 const cookieParser = require('cookie-parser');
 const path = require('path');
+const helpers = require('./utils/helper');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,9 +21,11 @@ app.use(session({
 }));
 
 // Handlebars setup
+// const hbs = exphbs.create({helpers})
 app.engine('handlebars', exphbs({
     defaultLayout: 'main',
-    extname: '.handlebars'
+    extname: '.handlebars',
+    helpers
 }));
 app.set('view engine', 'handlebars');
 app.set('views', './views');
