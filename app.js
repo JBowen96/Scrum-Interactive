@@ -8,6 +8,7 @@ const dashboardRoutes = require('./routes/dashboard');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const helpers = require('./utils/helper');
+require('dotenv').config()
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -66,19 +67,6 @@ app.get('/:view', isAuthenticated, (req, res) => {
     // Render the requested view
     res.render(req.params.view);
 });
-
-// Start the database connection
-
-// sequelize.authenticate()
-//     .then(() => {
-//         console.log('Connected to the database');
-//         app.listen(PORT, () => {
-//             console.log(`Server is running on http://localhost:${PORT}`);
-//         });
-//     })
-//     .catch((err) => {
-//         console.error('Error connecting to the database:', err);
-//     });
 
 // Server start 
 app.listen(PORT, () => {
