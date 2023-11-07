@@ -3,10 +3,12 @@ const express = require('express');
 const router = express.Router();
 const Card = require('../models/card.js');
 
-router.get('/dashboard', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const cards = await Card.findAll();
-        res.render('dashboard', { cards });
+        console.log(cards);
+        const cardData = cards.map(card => card.get({plain: true}));
+        res.render('dashboard', { cards:cardData });
     } catch (error) {
         console.error(error);
         res.status(500).send('Internal Server Error');
@@ -25,7 +27,6 @@ router.post('/create-card', async (req, res) => {
     }
 });
 
-
 router.post('/move-card/:id/:column', async (req, res) => {
     try {
         const { id, column } = req.params;
@@ -42,4 +43,4 @@ router.post('/move-card/:id/:column', async (req, res) => {
     }
 });
 
-module.exports = router;     
+module.exports = router;         
