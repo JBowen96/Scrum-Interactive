@@ -78,12 +78,19 @@
   gap: 1rem;
 }
 
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
 .info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   place-items: center;
   margin: 0 auto;
+  width: 85%;
 }
 
 .new-card {
@@ -93,4 +100,17 @@
   text-align: center;
   width: 50%;
   margin: 0 auto;
+}
+
+.to-do-container,
+.in-work-container,
+.completed-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr;
+  text-align: center;
+  margin: 0 auto;
+  height: 75%;
+  width: 75%;
+  place-self: start;
 }
