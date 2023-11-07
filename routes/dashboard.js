@@ -7,8 +7,8 @@ router.get('/', async (req, res) => {
     try {
         const cards = await Card.findAll();
         console.log(cards);
-        const cardData = cards.map(card => card.get({plain: true}));
-        res.render('dashboard', { cards:cardData });
+        const cardData = cards.map(card => card.get({ plain: true }));
+        res.render('dashboard', { cards: cardData });
     } catch (error) {
         console.error(error);
         res.status(500).send('Internal Server Error');
@@ -31,9 +31,9 @@ router.post('/move-card/:id/:column', async (req, res) => {
     try {
         const { id, column } = req.params;
         console.log('requested move to:', column)
-        await Card.update({ status:column }, { where: { id }});
-        const updatedCard = await Card.findOne({ where: { id }});
-        const cardData = updatedCard.get({plain: true});
+        await Card.update({ status: column }, { where: { id } });
+        const updatedCard = await Card.findOne({ where: { id } });
+        const cardData = updatedCard.get({ plain: true });
 
         console.log(cardData);
         res.status(200).json(cardData);
@@ -43,4 +43,27 @@ router.post('/move-card/:id/:column', async (req, res) => {
     }
 });
 
-module.exports = router;         
+router.delete('/delete-card/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deletedCard = await Card.findByPk(id);
+
+        if (!deletedCard) {
+            res.status(404).json({ error: 'Card not found' });
+            return;
+        }
+
+        await Card.destroy({
+            where: {
+                id
+            }
+        });
+
+        res.status(200).json(deletedCard);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+module.exports = router;      
