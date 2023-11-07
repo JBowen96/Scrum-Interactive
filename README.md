@@ -1,8 +1,8 @@
-# Scrum-Interactive
+# Nsap-to-It
 
 ##Description
 
-Scrum-Interactive is an efficient and easily operated project-tracking management database that allows users to monitor projects within the company. This visual work management tool facilitates corporative teams to ideate, plan, manage, and finalize their work in a collaborative, productive, and organized way without the headaches and complications other websites offer.
+Snap To It is an efficient and easily operated project-tracking management database that allows users to monitor projects within the company. This visual work management tool facilitates corporative teams to ideate, plan, manage, and finalize their work in a collaborative, productive, and organized way without the headaches and complications other websites offer.
 
 ###Table of Contents
 Installation
