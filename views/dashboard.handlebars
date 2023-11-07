@@ -95,7 +95,7 @@
                     if (!response.ok) {
                         throw new Error(`Server returned ${response.status} - ${response.statusText}`);
                     }
-                    return response.json();
+                    return response.statusText;
                 })
                 .then(createdCard => {
                     console.log('Card created successfully:', createdCard);
