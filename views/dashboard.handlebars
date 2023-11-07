@@ -1,9 +1,9 @@
 <div class="dashboard-container bg-gradient-to-b from-slate-200 to-slate-400">
-    <h1 class="text-3xl font-bold mb-4 text-center">Dashboard</h1>
+    <h1 class="text-3xl font-bold mb-4 text-center text-slate-800">Dashboard</h1>
 
     <!-- Form for creating new cards in 'to-do' column -->
     <div class="new-card">
-        <h2 class="text-2xl font-semibold mb-4">
+        <h2 class="text-2xl font-semibold mb-4 text-green-600">
             Create New Card:
         </h2>
         <form class="create-card-form" data-column="to-do">
@@ -18,7 +18,7 @@
     </div>
 
     <!-- Delete drop area -->
-    <div class="delete-container bg-red-400 p-4 mb-4 text-center" ondrop="drop(event, 'delete')"
+    <div class="delete-container bg-red-300 p-12 text-center border-2 border-red-400 border-dashed" ondrop="drop(event, 'delete')"
         ondragover="allowDrop(event)">
         <h2 class="text-xl font-semibold text-white">Delete Card</h2>
         <!-- Add any additional styling or content as needed -->
@@ -26,7 +26,7 @@
 
 
     <div class="info">
-        <div class="to-do-container border-blue-400 border-2 bg-blue-100 shadow-2xl">
+        <div class="to-do-container border-blue-400 border-2 bg-blue-100 shadow-2xl rounded-xl transition ease-in-out delay-150 hover:shadow-sky-900 hover:shadow-2xl hover:translate-y-1">
             <div class="column text-center" id="to-do" ondrop="drop(event, 'to-do')" ondragover="allowDrop(event)">
                 <h2 class="text-xl p-4 font-semibold border-b-2 border-blue-400 bg-blue-400">To-Do</h2>
                 {{#each cards}}
@@ -40,7 +40,7 @@
             </div>
         </div>
 
-        <div class="in-work-container border-blue-400 border-2 bg-blue-100 shadow-2xl">
+        <div class="in-work-container border-blue-400 border-2 bg-blue-100 shadow-2xl rounded-xl transition ease-in-out delay-150 hover:shadow-sky-900 hover:shadow-2xl hover:translate-y-1">
             <div class="column text-center" id="in-work" ondrop="drop(event, 'in-work')" ondragover="allowDrop(event)">
                 <h2 class="text-xl p-4 font-semibold border-b-2 border-blue-400 bg-blue-400">In-Work</h2>
                 {{#each cards}}
@@ -54,7 +54,7 @@
             </div>
         </div>
 
-        <div class="completed-container border-blue-400 border-2 bg-blue-100 shadow-2xl">
+        <div class="completed-container border-blue-400 border-2 bg-blue-100 shadow-2xl rounded-xl transition ease-in-out delay-150 hover:shadow-sky-900 hover:shadow-2xl hover:translate-y-1">
             <div class="column text-center" id="completed" ondrop="drop(event, 'completed')"
                 ondragover="allowDrop(event)">
                 <h2 class="text-xl p-4 font-semibold border-b-2 border-blue-400 bg-blue-400">Completed</h2>
