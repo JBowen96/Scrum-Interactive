@@ -32,7 +32,8 @@ Dashboard
 ![Initial Window](Dashboard.PNG))
 
 Snap to it cards Window
-![Work area](image.png)
+
+![image](https://github.com/JBowen96/Snap-To-It/assets/139423719/d063a824-d909-41e0-aa77-61a53ceebf68)
 
 ## License
 
