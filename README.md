@@ -35,6 +35,9 @@ Dashboard
 Snap to it cards Window
 
 
+![image](https://github.com/JBowen96/Snap-To-It/assets/139423719/d063a824-d909-41e0-aa77-61a53ceebf68)
+
+
 ## License
 
 This project is licensed under the MIT license.
